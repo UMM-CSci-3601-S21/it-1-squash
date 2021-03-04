@@ -56,6 +56,8 @@ This contributors to this project can be seen [here](../../graphs/contributors).
 
 ## Changing the name
 
+You can go ahead and remove this section of the README once you have changed the name.
+
 The project by default has the name "CSCI 3601 Iteration Template". There are a few places you need to change to make this the name you want:
 
 - The title of this README.md
@@ -68,5 +70,3 @@ The project by default has the name "CSCI 3601 Iteration Template". There are a 
   - The `mat-toolbar` element for the navigation drawer is just "Client" by default.
 - [`client/src/index.html`](client/src/index.html)
   - The `title` element
-
-You can go ahead and remove this section of the README once you have changed the name.
