@@ -15,7 +15,7 @@ import umm3601.user.UserController;
 
 public class Server {
 
-  static String appName = "CSCI 3601 Iteration Template";
+  static String appName = "Team Squash";
 
   public static void main(String[] args) {
 
@@ -25,11 +25,8 @@ public class Server {
     String databaseName = System.getenv().getOrDefault("MONGO_DB", "dev");
 
     // Setup the MongoDB client object with the information we set earlier
-    MongoClient mongoClient
-      = MongoClients.create(MongoClientSettings
-        .builder()
-        .applyToClusterSettings(builder -> builder.hosts(Arrays.asList(new ServerAddress(mongoAddr))))
-        .build());
+    MongoClient mongoClient = MongoClients.create(MongoClientSettings.builder()
+        .applyToClusterSettings(builder -> builder.hosts(Arrays.asList(new ServerAddress(mongoAddr)))).build());
 
     // Get the database
     MongoDatabase database = mongoClient.getDatabase(databaseName);
@@ -41,11 +38,10 @@ public class Server {
       config.registerPlugin(new RouteOverviewPlugin("/api"));
     });
     /*
-     * We want to shut the `mongoClient` down if the server either
-     * fails to start, or when it's shutting down for whatever reason.
-     * Since the mongClient needs to be available throughout the
-     * life of the server, the only way to do this is to wait for
-     * these events and close it then.
+     * We want to shut the `mongoClient` down if the server either fails to start,
+     * or when it's shutting down for whatever reason. Since the mongClient needs to
+     * be available throughout the life of the server, the only way to do this is to
+     * wait for these events and close it then.
      */
     server.events(event -> {
       event.serverStartFailed(mongoClient::close);
