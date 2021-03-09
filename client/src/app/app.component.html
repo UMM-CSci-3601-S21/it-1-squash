@@ -26,6 +26,16 @@
         <mat-icon matListIcon>people</mat-icon>
         Users
       </a>
+
+      <a
+        mat-list-item
+        routerLink="/wordlists"
+        routerLinkActive="drawer-list-item-active"
+        (click)="drawer.close()"
+      >
+        <mat-icon matListIcon>library_books</mat-icon>
+        Wordlists
+      </a>
     </mat-nav-list>
   </mat-sidenav>
 
