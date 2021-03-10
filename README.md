@@ -7,21 +7,26 @@
 [![BCH compliance](https://bettercodehub.com/edge/badge/UMM-CSci-3601-S21/it-1-squash?branch=main)](https://bettercodehub.com/)
 [![Total alerts](https://img.shields.io/lgtm/alerts/g/UMM-CSci-3601-S21/it-1-squash.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/UMM-CSci-3601-S21/it-1-squash/alerts/)
 
+- [:exclamation: Elevator Pitch](#exclamation-elevator-pitch)
 - [Development](#development)
   - [Common commands](#common-commands)
 - [Deployment](#deployment)
 - [Resources](#resources)
 - [Contributors](#contributors)
 
-This is your starter code for Iteration 1.
+## :exclamation: Elevator Pitch 
 
-There are a number of pieces in this production template to help you get started. As you work on your project, you should replace some of these pieces with elements of your project and remove whatever you don't need (e.g., markdown files, JSON data files, or any remnants of the labs). We include, for example, the users parts of the
-previous labs. These are almost certainly not relevant to your project
-and should be removed once you've started.
+Team Squash (Josh Quist, Jacob Jennes, Alica Ellstrom, Elmurad Abbasov) is here to deliver a learning facilitation tool that supports the creation, management, and analysis of student language exploration experiences - Word River. Unlike managing all of this information by hand, our product makes it easy to manage what experiences are available (through the creation, viewing, and assignment of personalized content) and understand more about a learner’s exploration and progress.
 
-:exclamation: You should remove this sentence and the text above, and
-replace them with least an elevator pitch description of your project so that
-if someone comes to this repo they'll know what the project is about.
+From our technical side, we will try to provide the users several different options of how they would like to create and manage word lists. One of our first ideas was to provide an option to build words from the grammar perspective, such as with nouns, verbs, and adjectives. 
+
+For that, we would:
+
+- create word lists in .json format accessible by story builder 
+- enable editing of words lists
+- allow viewing created word lists in Word River 
+
+For the first iteration, our customers, or mainly teachers, parents, and researchers would have an opportunity to view word lists in Angular in a format similar to story builder, as well as to edit word lists. 
 
 ## [Development](DEVELOPMENT.md)
 
