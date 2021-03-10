@@ -16,9 +16,9 @@
 
 ## :exclamation: Elevator Pitch 
 
-Team Squash (Josh Quist, Jacob Jennes, Alica Ellstrom, Elmurad Abbasov) is here to deliver a learning facilitation tool that supports the creation, management, and analysis of student language exploration experiences - Word River. Unlike managing all of this information by hand, our product makes it easy to manage what experiences are available (through the creation, viewing, and assignment of personalized content) and understand more about a learner’s exploration and progress.
+Team Squash (Josh Quist, Jacob Jenness, Alice Ellstrom, Elmurad Abbasov) is here to deliver a learning facilitation tool that supports the creation, management, and analysis of student language exploration experiences - Word River. Unlike managing all of this information by hand, our product makes it easy to manage what experiences are available (through the creation, viewing, and assignment of personalized content) and understand more about a learner’s exploration and progress.
 
-From our technical side, we will try to provide the users several different options of how they would like to create and manage word lists. One of our first ideas was to provide an option to build words from the grammar perspective, such as with nouns, verbs, and adjectives. 
+From our technical side in iteration one, we will try to provide the users several different options of how they would like to create and manage word lists. One of our first ideas was to provide an option to build words from the grammar perspective, such as with nouns, verbs, and adjectives. 
 
 For that, we would:
 
