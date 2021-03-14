@@ -9,7 +9,6 @@ import com.mongodb.client.MongoDatabase;
 import io.javalin.Javalin;
 import io.javalin.core.util.RouteOverviewPlugin;
 
-import umm3601.user.UserController;
 import umm3601.wordRiver.WordRiverController;
 
 public class Server {
@@ -31,7 +30,6 @@ public class Server {
     MongoDatabase database = mongoClient.getDatabase(databaseName);
 
     // Initialize dependencies
-    UserController userController = new UserController(database);
     WordRiverController wordRiverController = new WordRiverController(database);
     Javalin server = Javalin.create(config -> {
       config.registerPlugin(new RouteOverviewPlugin("/api"));
@@ -55,19 +53,6 @@ public class Server {
     // Gets the context packs that are currently in the database.
     // NOTE: The database must be seeded before this can work properly
     server.get("/api/wordlists", wordRiverController::getPacks);
-
-    // List users, filtered using query parameters
-    server.get("/api/users", userController::getUsers);
-
-    // Get the specified user
-    server.get("/api/users/:id", userController::getUser);
-
-    // Delete the specified user
-    server.delete("/api/users/:id", userController::deleteUser);
-
-    // Add new user with the user info being in the JSON body
-    // of the HTTP request
-    server.post("/api/users", userController::addNewUser);
 
     server.exception(Exception.class, (e, ctx) -> {
       ctx.status(500);
