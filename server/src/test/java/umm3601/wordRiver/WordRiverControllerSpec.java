@@ -122,6 +122,6 @@ public void GetAllContextPacks() throws IOException {
 public void verifySchema() {
   ContextPack schema = new ContextPack();
   assertEquals("https://raw.githubusercontent.com/kidstech/story-builder/master/Assets/packs/schema/pack.schema.json",
-  schema.$schema);
+  schema.schema);
   }
 }
