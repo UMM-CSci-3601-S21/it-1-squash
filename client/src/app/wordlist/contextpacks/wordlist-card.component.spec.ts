@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WordlistComponent } from './wordlist.component';
+import { WordlistCardComponent } from './wordlist-card.component';
 
-describe('WordlistComponent', () => {
-  let component: WordlistComponent;
-  let fixture: ComponentFixture<WordlistComponent>;
+describe('WordlistCardComponent', () => {
+  let component: WordlistCardComponent;
+  let fixture: ComponentFixture<WordlistCardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WordlistComponent ]
+      declarations: [ WordlistCardComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WordlistComponent);
+    fixture = TestBed.createComponent(WordlistCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

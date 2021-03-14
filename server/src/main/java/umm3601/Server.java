@@ -1,21 +1,20 @@
 package umm3601;
 
 import java.util.Arrays;
-
 import com.mongodb.MongoClientSettings;
 import com.mongodb.ServerAddress;
 import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoDatabase;
-
 import io.javalin.Javalin;
 import io.javalin.core.util.RouteOverviewPlugin;
 
 import umm3601.user.UserController;
+import umm3601.wordRiver.WordRiverController;
 
 public class Server {
 
-  static String appName = "Team Squash";
+  static String appName = "Word River";
 
   public static void main(String[] args) {
 
@@ -33,15 +32,15 @@ public class Server {
 
     // Initialize dependencies
     UserController userController = new UserController(database);
-
+    WordRiverController wordRiverController = new WordRiverController(database);
     Javalin server = Javalin.create(config -> {
       config.registerPlugin(new RouteOverviewPlugin("/api"));
     });
     /*
      * We want to shut the `mongoClient` down if the server either fails to start,
-     * or when it's shutting down for whatever reason. Since the mongClient needs to
-     * be available throughout the life of the server, the only way to do this is to
-     * wait for these events and close it then.
+     * or when it's shutting down for whatever reason. Since the mongoClient needs
+     * to be available throughout the life of the server, the only way to do this is
+     * to wait for these events and close it then.
      */
     server.events(event -> {
       event.serverStartFailed(mongoClient::close);
@@ -52,6 +51,10 @@ public class Server {
     }));
 
     server.start(4567);
+
+    // Gets the context packs that are currently in the database.
+    // NOTE: The database must be seeded before this can work properly
+    server.get("/api/wordlists", wordRiverController::getPacks);
 
     // List users, filtered using query parameters
     server.get("/api/users", userController::getUsers);
@@ -68,7 +71,6 @@ public class Server {
 
     server.exception(Exception.class, (e, ctx) -> {
       ctx.status(500);
-      ctx.json(e); // you probably want to remove this in production
     });
   }
 }

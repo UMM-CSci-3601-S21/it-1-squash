@@ -1,48 +1,274 @@
-[{
-  "name": "Batman",
-  "icon": "bat_signal.jpg",
-  "enabled": true,
-
-  "wordpacks": [
-    {
-      "name": "batman_villains",
-      "enabled": true,
-      "nouns": [
-        { "word": "Joker", "forms": ["Joker"] },
-        { "word": "villain", "forms": ["villain, villains"] }
-      ],
-
-      "verbs": [
-        { "word": "fly", "forms": ["fly", "flown", "flew"] },
-        { "word": "dance", "forms": ["dance", "danced"] },
-        { "word": "steal", "forms": ["steal", "stole"] },
-        { "word": "laugh", "forms": ["laugh", "laughed", "laughing"] },
-        { "word": "hide", "forms": ["hide", "hid", "hiding"] }
-      ],
-
-      "adjectives": [
-        { "word": "evil", "forms": ["evil"] },
-        { "word": "sad", "forms": ["sad"] }
-      ],
-
-      "misc": [{ "word": "the", "forms": ["the"] }]
+[
+  {
+    "_id": {
+      "$oid": "604cdf3c1ede03930fd5705c"
     },
-
-    {
-      "name": "batman_basics",
-      "enabled": true,
-      "nouns": [
-				{ "word": "Batman", "forms": ["Batman"] },
-				{ "word": "Robin", "forms": ["Robin"] }
-			],
-
-      "verbs": [
-        { "word": "fly", "forms": ["fly", "flown", "flew"] },
-        { "word": "dance", "forms": ["dance", "danced"] }
-      ],
-
-      "adjectives": [{ "word": "brave", "forms": ["brave"] }],
-      "misc": []
-    }
-  ]
-}]
+    "schema": "https://raw.githubusercontent.com/kidstech/story-builder/master/Assets/packs/schema/pack.schema.json",
+    "name": "Batman Villains",
+    "icon": "example.png",
+    "enabled": true,
+    "wordlist": [
+      {
+        "name": "Batman Villains",
+        "enabled": true,
+        "nouns": [
+          {
+            "word": "Joker",
+            "forms": [
+              "Joker"
+            ]
+          },
+          {
+            "word": "villain",
+            "forms": [
+              "villain, villains"
+            ]
+          }
+        ],
+        "verbs": [
+          {
+            "word": "fly",
+            "forms": [
+              "fly",
+              "flown",
+              "flew"
+            ]
+          },
+          {
+            "word": "dance",
+            "forms": [
+              "dance",
+              "danced"
+            ]
+          },
+          {
+            "word": "steal",
+            "forms": [
+              "steal",
+              "stole"
+            ]
+          },
+          {
+            "word": "laugh",
+            "forms": [
+              "laugh",
+              "laughed",
+              "laughing"
+            ]
+          },
+          {
+            "word": "hide",
+            "forms": [
+              "hide",
+              "hid",
+              "hiding"
+            ]
+          }
+        ],
+        "adjectives": [
+          {
+            "word": "evil",
+            "forms": [
+              "evil"
+            ]
+          },
+          {
+            "word": "sad",
+            "forms": [
+              "sad"
+            ]
+          }
+        ],
+        "misc": [
+          {
+            "word": "the",
+            "forms": [
+              "the"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "604cdf3c8d7aeecae7797435"
+    },
+    "schema": "https://raw.githubusercontent.com/kidstech/story-builder/master/Assets/packs/schema/pack.schema.json",
+    "name": "Batman",
+    "icon": "example.png",
+    "enabled": true,
+    "wordlist": [
+      {
+        "name": "Batman",
+        "enabled": true,
+        "nouns": [
+          {
+            "word": "Joker",
+            "forms": [
+              "Joker"
+            ]
+          },
+          {
+            "word": "villain",
+            "forms": [
+              "villain, villains"
+            ]
+          }
+        ],
+        "verbs": [
+          {
+            "word": "fly",
+            "forms": [
+              "fly",
+              "flown",
+              "flew"
+            ]
+          },
+          {
+            "word": "dance",
+            "forms": [
+              "dance",
+              "danced"
+            ]
+          },
+          {
+            "word": "steal",
+            "forms": [
+              "steal",
+              "stole"
+            ]
+          },
+          {
+            "word": "laugh",
+            "forms": [
+              "laugh",
+              "laughed",
+              "laughing"
+            ]
+          },
+          {
+            "word": "hide",
+            "forms": [
+              "hide",
+              "hid",
+              "hiding"
+            ]
+          }
+        ],
+        "adjectives": [
+          {
+            "word": "evil",
+            "forms": [
+              "evil"
+            ]
+          },
+          {
+            "word": "sad",
+            "forms": [
+              "sad"
+            ]
+          }
+        ],
+        "misc": [
+          {
+            "word": "the",
+            "forms": [
+              "the"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "604cdf3c63292e16753345f8"
+    },
+    "schema": "https://raw.githubusercontent.com/kidstech/story-builder/master/Assets/packs/schema/pack.schema.json",
+    "name": "Batman Allies",
+    "icon": "example.png",
+    "enabled": false,
+    "wordlist": [
+      {
+        "name": "Batman Allies",
+        "enabled": false,
+        "nouns": [
+          {
+            "word": "Joker",
+            "forms": [
+              "Joker"
+            ]
+          },
+          {
+            "word": "villain",
+            "forms": [
+              "villain, villains"
+            ]
+          }
+        ],
+        "verbs": [
+          {
+            "word": "fly",
+            "forms": [
+              "fly",
+              "flown",
+              "flew"
+            ]
+          },
+          {
+            "word": "dance",
+            "forms": [
+              "dance",
+              "danced"
+            ]
+          },
+          {
+            "word": "steal",
+            "forms": [
+              "steal",
+              "stole"
+            ]
+          },
+          {
+            "word": "laugh",
+            "forms": [
+              "laugh",
+              "laughed",
+              "laughing"
+            ]
+          },
+          {
+            "word": "hide",
+            "forms": [
+              "hide",
+              "hid",
+              "hiding"
+            ]
+          }
+        ],
+        "adjectives": [
+          {
+            "word": "evil",
+            "forms": [
+              "evil"
+            ]
+          },
+          {
+            "word": "sad",
+            "forms": [
+              "sad"
+            ]
+          }
+        ],
+        "misc": [
+          {
+            "word": "the",
+            "forms": [
+              "the"
+            ]
+          }
+        ]
+      }
+    ]
+  }]
