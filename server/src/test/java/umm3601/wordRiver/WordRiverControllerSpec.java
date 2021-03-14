@@ -112,11 +112,11 @@ public static void teardown() {
 @Test
 public void GetAllContextPacks() throws IOException {
   //Create fake Javalin context
-  Context ctx = ContextUtil.init(mockReq,mockRes, "api/packs");
+  Context ctx = ContextUtil.init(mockReq,mockRes, "api/wordlists");
   wordRiverController.getPacks(ctx);
   assertEquals(200, mockRes.getStatus());
   String result = ctx.resultString();
-  assertEquals(db.getCollection("packs").countDocuments(), JavalinJson.fromJson(result, ContextPack[].class).length);
+  assertEquals(db.getCollection("wordlists").countDocuments(), JavalinJson.fromJson(result, ContextPack[].class).length);
 }
 @Test
 public void verifySchema() {
