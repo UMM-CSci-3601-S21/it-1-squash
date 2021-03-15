@@ -20,4 +20,8 @@ export class ContextPackService {
     });
   }
 
+  getPack(id: string): Observable<ContextPack> {
+    return this.httpClient.get<ContextPack>(this.contextPackUrl + '/' + id);
+  }
+
 }

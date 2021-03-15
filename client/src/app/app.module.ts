@@ -34,6 +34,8 @@ import { UserProfileComponent } from './users/user-profile.component';
 import { AddUserComponent } from './users/add-user.component';
 import { WordlistComponent } from './wordlist/contextpacks/wordlist.component';
 import { ContextPackService } from './wordlist/context-pack.service';
+import { WordlistCardComponent } from './wordlist/contextpacks/wordlist-card.component';
+import { WordlistInfoComponent } from './wordlist/contextpacks/wordlist-info.component';
 
 const MATERIAL_MODULES: any[] = [
   MatListModule,
@@ -63,6 +65,8 @@ const MATERIAL_MODULES: any[] = [
     UserProfileComponent,
     AddUserComponent,
     WordlistComponent,
+    WordlistCardComponent,
+    WordlistInfoComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { UserListComponent } from './users/user-list.component';
 import { UserProfileComponent } from './users/user-profile.component';
 import { AddUserComponent } from './users/add-user.component';
 import { WordlistComponent } from './wordlist/contextpacks/wordlist.component';
+import { WordlistInfoComponent } from './wordlist/contextpacks/wordlist-info.component';
 
 
 const routes: Routes = [
@@ -13,7 +14,7 @@ const routes: Routes = [
   {path: 'users/new', component: AddUserComponent},
   {path: 'users/:id', component: UserProfileComponent},
   {path: 'wordlists', component: WordlistComponent},
-  {path: 'wordlists/:id', component: WordlistComponent}
+  {path: 'wordlists/:id', component: WordlistInfoComponent}
 ];
 
 @NgModule({
