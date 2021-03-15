@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { ContextPack } from '../context-pack';
 
 @Component({
-  selector: 'app-cp-card',
+  selector: 'app-wordlist-card',
   templateUrl: './wordlist-card.component.html',
   styleUrls: ['./wordlist-card.component.scss']
 })

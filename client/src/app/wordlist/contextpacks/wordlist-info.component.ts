@@ -5,7 +5,7 @@ import { ContextPack } from '../context-pack';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-cp-info',
+  selector: 'app-wordlist-info',
   templateUrl: './wordlist-info.component.html',
   styleUrls: ['./wordlist-info.component.scss']
 })

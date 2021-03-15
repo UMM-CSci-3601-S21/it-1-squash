@@ -5,7 +5,7 @@ import { ContextPackService } from '../context-pack.service';
 import { Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-cp-list',
+  selector: 'app-wordlist-list',
   templateUrl: './wordlist.component.html',
   styleUrls: ['./wordlist.component.scss']
 })
