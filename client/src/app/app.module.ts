@@ -57,7 +57,6 @@ const MATERIAL_MODULES: any[] = [
   declarations: [
     AppComponent,
     HomeComponent,
-    WordlistComponent,
     ContextPackListComponent,
     ContextPackCardComponent,
     ContextPackInfoComponent,
