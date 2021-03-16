@@ -104,13 +104,6 @@ public class WordRiverControllerSpec {
   }
 
   @Test
-  public void verifySchema() {
-    ContextPack schema = new ContextPack();
-    assertEquals("https://raw.githubusercontent.com/kidstech/story-builder/master/Assets/packs/schema/pack.schema.json",
-        schema.schema);
-  }
-
-  @Test
 public void GetContextPackWithExistentId() throws IOException {
 
   String testID = robinId.toHexString();
