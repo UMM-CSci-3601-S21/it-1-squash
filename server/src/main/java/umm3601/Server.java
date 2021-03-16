@@ -56,6 +56,8 @@ public class Server {
     // NOTE: The database must be seeded before this can work properly
     server.get("/api/wordlists", wordRiverController::getPacks);
 
+    server.get("/api/wordlists/:id", wordRiverController::getPack);
+
     // List users, filtered using query parameters
     server.get("/api/users", userController::getUsers);
 

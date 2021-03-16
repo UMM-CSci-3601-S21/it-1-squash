@@ -269,6 +269,86 @@
             ]
           }
         ]
+      },
+      {
+        "name": "Batman Allies",
+        "enabled": false,
+        "nouns": [
+          {
+            "word": "Joker",
+            "forms": [
+              "Joker"
+            ]
+          },
+          {
+            "word": "villain",
+            "forms": [
+              "villain, villains"
+            ]
+          }
+        ],
+        "verbs": [
+          {
+            "word": "fly",
+            "forms": [
+              "fly",
+              "flown",
+              "flew"
+            ]
+          },
+          {
+            "word": "dance",
+            "forms": [
+              "dance",
+              "danced"
+            ]
+          },
+          {
+            "word": "steal",
+            "forms": [
+              "steal",
+              "stole"
+            ]
+          },
+          {
+            "word": "laugh",
+            "forms": [
+              "laugh",
+              "laughed",
+              "laughing"
+            ]
+          },
+          {
+            "word": "hide",
+            "forms": [
+              "hide",
+              "hid",
+              "hiding"
+            ]
+          }
+        ],
+        "adjectives": [
+          {
+            "word": "evil",
+            "forms": [
+              "evil"
+            ]
+          },
+          {
+            "word": "sad",
+            "forms": [
+              "sad"
+            ]
+          }
+        ],
+        "misc": [
+          {
+            "word": "the",
+            "forms": [
+              "the"
+            ]
+          }
+        ]
       }
     ]
   }]
