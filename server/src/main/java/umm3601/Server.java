@@ -53,6 +53,9 @@ public class Server {
     // Gets the context packs that are currently in the database.
     // NOTE: The database must be seeded before this can work properly
     server.get("/api/wordlists", wordRiverController::getPacks);
+    
+    // Gets a single context pack from the database
+    server.get("/api/wordlists/:id", wordRiverController::getPack);
 
     server.exception(Exception.class, (e, ctx) -> {
       ctx.status(500);

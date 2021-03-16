@@ -1,0 +1,45 @@
+<mat-card class="wordlists-card" *ngIf="this.wordList">
+  <mat-card-header>
+    <div fxFlex>
+    <mat-card-title class="wordlist-card-name">
+     {{this.wordList.name}}
+    </mat-card-title>
+
+    <mat-card id="nouns">
+    <mat-card-content id="pos">Nouns</mat-card-content>
+    <mat-card-content class="wordforms" *ngFor="let nounWord of wordList.nouns">
+      <ul id="type">Word:</ul>
+      <ol>{{nounWord.word}} </ol>
+      <ul>Forms:</ul>
+      <ol>{{nounWord.forms}}</ol>
+    </mat-card-content>
+    </mat-card>
+    <mat-card id="adj">
+    <mat-card-content id="pos">Adjectives</mat-card-content>
+    <mat-card-content class="wordforms" *ngFor="let adjWord of wordList.adjectives">
+      <ul id="type">Word:</ul>
+      <ol>{{adjWord.word}}</ol>
+      <ul>Forms:</ul>
+      <ol>{{adjWord.forms}}</ol>
+    </mat-card-content>
+    </mat-card>
+    <mat-card id="verbs">
+    <mat-card-content id="pos">Verbs</mat-card-content>
+    <mat-card-content class="wordforms" *ngFor="let verbWord of wordList.verbs">
+      <ul id="type">Word: </ul>
+      <ol>{{verbWord.word}}</ol>
+      <ul>Forms:</ul>
+      <ol>{{verbWord.forms}}</ol>
+    </mat-card-content>
+    </mat-card>
+    <mat-card id="misc">
+    <mat-card-content id="pos">Misc</mat-card-content>
+    <mat-card-content class="wordforms" *ngFor="let miscWord of wordList.misc">
+      <ul id="type">Word: {{miscWord.word}}</ul>
+      <ul>Forms: {{miscWord.forms}}</ul>
+      <ol></ol>
+    </mat-card-content>
+    </mat-card>
+    </div>
+  </mat-card-header>
+</mat-card>
