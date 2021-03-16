@@ -1,10 +1,9 @@
-import { Component, OnInit, OnDestroy, Input } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ContextPackService } from '../context-pack.service';
 import { Subscription } from 'rxjs';
 import { ContextPack } from '../context-pack';
 import { ActivatedRoute } from '@angular/router';
 import { WordList } from '../word-list';
-import { WordlistCardComponent } from '../wordlists/wordlist-card.component';
 
 @Component({
   selector: 'app-wordlist-info',
