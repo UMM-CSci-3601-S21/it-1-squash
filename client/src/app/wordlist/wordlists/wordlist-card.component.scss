@@ -1,8 +1,25 @@
 
 .mat-card-title {
+  background-color:bisque;
   display: inline-block;
   font-size: 20px;
   padding-left: 15px;
+}
+
+#nouns {
+  background-color:lightcoral;
+}
+
+#adj {
+  background-color: lightgreen;
+}
+
+#verbs {
+  background-color: lightblue;
+}
+
+#misc{
+  background-color: lightyellow;
 }
 
 #pos {
