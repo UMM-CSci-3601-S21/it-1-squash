@@ -32,10 +32,11 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { UserCardComponent } from './users/user-card.component';
 import { UserProfileComponent } from './users/user-profile.component';
 import { AddUserComponent } from './users/add-user.component';
-import { WordlistComponent } from './wordlist/contextpacks/wordlist.component';
+import { ContextPackListComponent } from './wordlist/contextpacks/contextpack-list.component';
 import { ContextPackService } from './wordlist/context-pack.service';
-import { WordlistCardComponent } from './wordlist/contextpacks/wordlist-card.component';
-import { WordlistInfoComponent } from './wordlist/contextpacks/wordlist-info.component';
+import { ContextPackCardComponent } from './wordlist/contextpacks/contextpack-card.component';
+import { ContextPackInfoComponent } from './wordlist/contextpacks/contextpack-info.component';
+import { WordlistCardComponent } from './wordlist/wordlists/wordlist-card.component';
 
 const MATERIAL_MODULES: any[] = [
   MatListModule,
@@ -64,9 +65,10 @@ const MATERIAL_MODULES: any[] = [
     UserCardComponent,
     UserProfileComponent,
     AddUserComponent,
-    WordlistComponent,
-    WordlistCardComponent,
-    WordlistInfoComponent
+    ContextPackListComponent,
+    ContextPackCardComponent,
+    ContextPackInfoComponent,
+    WordlistCardComponent
   ],
   imports: [
     BrowserModule,

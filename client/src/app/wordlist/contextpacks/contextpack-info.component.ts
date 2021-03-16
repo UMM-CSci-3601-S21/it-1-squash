@@ -3,15 +3,17 @@ import { ContextPackService } from '../context-pack.service';
 import { Subscription } from 'rxjs';
 import { ContextPack } from '../context-pack';
 import { ActivatedRoute } from '@angular/router';
+import { WordList } from '../word-list';
 
 @Component({
   selector: 'app-wordlist-info',
-  templateUrl: './wordlist-info.component.html',
-  styleUrls: ['./wordlist-info.component.scss']
+  templateUrl: './contextpack-info.component.html',
+  styleUrls: ['./contextpack-info.component.scss']
 })
-export class WordlistInfoComponent implements OnInit, OnDestroy {
+export class ContextPackInfoComponent implements OnInit, OnDestroy {
 
   contextPack: ContextPack;
+  wordList: Array<WordList>;
   id: string;
   getCpSub: Subscription;
 

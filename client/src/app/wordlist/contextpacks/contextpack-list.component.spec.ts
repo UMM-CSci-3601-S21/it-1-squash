@@ -1,22 +1,22 @@
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { WordlistComponent } from './wordlist.component';
+import { ContextPackListComponent } from './contextpack-list.component';
 
-describe('WordlistComponent', () => {
-  let component: WordlistComponent;
-  let fixture: ComponentFixture<WordlistComponent>;
+describe('ContextPackListComponent', () => {
+  let component: ContextPackListComponent;
+  let fixture: ComponentFixture<ContextPackListComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ WordlistComponent ],
+      declarations: [ ContextPackListComponent ],
       imports: [HttpClientModule]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(WordlistComponent);
+    fixture = TestBed.createComponent(ContextPackListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

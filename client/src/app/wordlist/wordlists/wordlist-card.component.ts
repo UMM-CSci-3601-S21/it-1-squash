@@ -1,14 +1,14 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ContextPack } from '../context-pack';
+import { WordList } from '../word-list';
 
 @Component({
-  selector: 'app-wordlist-card',
+  selector: 'app-wordlists-card',
   templateUrl: './wordlist-card.component.html',
   styleUrls: ['./wordlist-card.component.scss']
 })
 export class WordlistCardComponent implements OnInit {
 
-  @Input() contextPack: ContextPack;
+  @Input() wordList: WordList;
   @Input() simple ? = false;
 
   constructor() { }

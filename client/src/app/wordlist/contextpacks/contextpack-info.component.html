@@ -1,0 +1,13 @@
+<div fxLayout="row">
+  <div fxFlex fxFlex.gt-sm="80" fxFlexOffset.gt-sm="10">
+    <app-contextpack-card class="cp-display" [contextPack]="this.contextPack"></app-contextpack-card>
+  </div>
+</div>
+
+<div fxLayout="column">
+  <div fxFlex fxFlex.gt-sm="80" fxFlexOffset.gt-sm="10">
+      <div fxLayout="row wrap" fxLayoutGap="10px" class="word-list-container">
+        <app-wordlists-card simple="true" *ngFor="let wl of this.contextPack.wordlist" class="wl-card" [wordList]="wl" fxFlex="1 1 280px"></app-wordlists-card>
+      </div>
+   </div>
+ </div>

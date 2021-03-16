@@ -6,10 +6,10 @@ import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-wordlist-list',
-  templateUrl: './wordlist.component.html',
-  styleUrls: ['./wordlist.component.scss']
+  templateUrl: './contextpack-list.component.html',
+  styleUrls: ['./contextpack-list.component.scss']
 })
-export class WordlistComponent implements OnInit, OnDestroy {
+export class ContextPackListComponent implements OnInit, OnDestroy {
 
   public contextPacks: ContextPack[];
 
