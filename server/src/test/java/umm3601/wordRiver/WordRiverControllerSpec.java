@@ -17,6 +17,7 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+
 import org.bson.Document;
 import org.bson.types.ObjectId;
 import org.junit.jupiter.api.AfterAll;
@@ -56,6 +57,9 @@ public class WordRiverControllerSpec {
     MongoCollection<Document> ctxDocuments = db.getCollection("wordlists");
     ctxDocuments.drop();
     List<Document> testPacks = new ArrayList<>();
+
+    // this format for adding items was borrowed from Team Climate https://github.com/UMM-CSci-3601-S21/it-1-climate
+
     testPacks.add(new Document().append("name", "batman").append("icon", "batman.png").append("enabled", "true").append(
         "wordlist",
         Arrays.asList(new Document().append("name", "batman").append("enabled", true)
@@ -96,7 +100,7 @@ public class WordRiverControllerSpec {
   public void GetAllContextPacks() throws IOException {
     // Create fake Javalin context
     Context ctx = ContextUtil.init(mockReq, mockRes, "api/wordlists");
-    wordRiverController.getPacks(ctx);
+    wordRiverController.getContextPacks(ctx);
     assertEquals(200, mockRes.getStatus());
     String result = ctx.resultString();
     assertEquals(db.getCollection("wordlists").countDocuments(),
@@ -109,7 +113,7 @@ public void GetContextPackWithExistentId() throws IOException {
   String testID = robinId.toHexString();
 
   Context ctx = ContextUtil.init(mockReq, mockRes, "api/wordlists/:id", ImmutableMap.of("id", testID));
-  wordRiverController.getPack(ctx);
+  wordRiverController.getContextPack(ctx);
 
   assertEquals(200, mockRes.getStatus());
 
@@ -126,7 +130,7 @@ public void GetContextPackWithExistentId() throws IOException {
     Context ctx = ContextUtil.init(mockReq, mockRes, "api/wordlists/:id", ImmutableMap.of("id", "bad"));
 
     assertThrows(BadRequestResponse.class, () -> {
-      wordRiverController.getPack(ctx);
+      wordRiverController.getContextPack(ctx);
     });
   }
 
@@ -136,8 +140,28 @@ public void GetContextPackWithExistentId() throws IOException {
     Context ctx = ContextUtil.init(mockReq, mockRes, "api/wordlists/:id", ImmutableMap.of("id", "58af3a600343927e48e87335"));
 
     assertThrows(NotFoundResponse.class, () -> {
-      wordRiverController.getPack(ctx);
+      wordRiverController.getContextPack(ctx);
     });
   }
 
+  @Test
+public void AddNewWordList() throws IOException {
+  String testNewWordList = "{"
+    + "\"name\": \"Test\","
+    + "\"enabled\": true,"
+    + "\"nouns\": [],"
+    + "\"verbs\": [],"
+    + "\"adjectives\": [],"
+    + "\"misc\": []"
+    + "}";
+
+    String testID = robinId.toHexString();
+    mockReq.setBodyContent(testNewWordList);
+    mockReq.setMethod("POST");
+
+    Context ctx = ContextUtil.init(mockReq, mockRes, "api/wordlists/:id", ImmutableMap.of("id", testID));
+    wordRiverController.addWordList(ctx);
+
+    assertEquals(200, mockRes.getStatus());
+}
 }

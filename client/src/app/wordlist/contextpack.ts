@@ -1,5 +1,5 @@
 
-import { WordList } from './word-list';
+import { WordList } from './wordlist';
 
 export interface ContextPack {
 

@@ -18,9 +18,9 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { ContextPackListComponent } from './contextpack-list.component';
 import { ContextPackCardComponent } from './contextpack-card.component';
-import { MockCPService } from 'src/testing/context-pack.service.mock';
-import { ContextPackService } from '../context-pack.service';
-import { ContextPack } from '../context-pack';
+import { MockCPService } from 'src/testing/contextpack.service.mock';
+import { ContextPackService } from '../contextpack.service';
+import { ContextPack } from '../contextpack';
 
 const COMMON_IMPORTS: any[] = [
   FormsModule,
@@ -81,13 +81,13 @@ describe('Misbehaving Context Pack List', () => {
   let cpList: ContextPackListComponent;
   let fixture: ComponentFixture<ContextPackListComponent>;
   let cpServiceStub: {
-     getPacks: () =>  Observable<ContextPack[]>;
+     getContextPacks: () =>  Observable<ContextPack[]>;
   };
 
   beforeEach(() =>  {
     // Stub Context-Pack service for test purposes
     cpServiceStub = {
-      getPacks: () => new Observable(observer => {
+      getContextPacks: () => new Observable(observer => {
          observer.error('Error-prone observable');
       })
     };

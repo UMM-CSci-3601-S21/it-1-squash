@@ -4,6 +4,8 @@ import static com.mongodb.client.model.Filters.eq;
 
 import java.util.ArrayList;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Updates;
+
 import org.bson.Document;
 import org.bson.types.ObjectId;
 import org.mongojack.JacksonMongoCollection;
@@ -30,11 +32,11 @@ public class WordRiverController {
    *
    * @param ctx a Javalin HTTP context
    */
-  public void getPacks(Context ctx) {
+  public void getContextPacks(Context ctx) {
     ctx.json(contextPackCollection.find(new Document()).into(new ArrayList<>()));
   }
 
-  public void getPack(Context ctx) {
+  public void getContextPack(Context ctx) {
 
     String id = ctx.pathParam("id");
     ContextPack contextPack;
@@ -49,6 +51,15 @@ public class WordRiverController {
     } else {
       ctx.json(contextPack);
     }
+  }
+
+  // addWordList method borrowed from Team Climate https://github.com/UMM-CSci-3601-S21/it-1-climate
+
+  public void addWordList(Context ctx) {
+    WordList newWordList = ctx.bodyValidator(WordList.class)
+      .get();
+    String id = ctx.pathParam("id");
+    contextPackCollection.updateById(id, Updates.push("wordlist", newWordList));
   }
 
 }

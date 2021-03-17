@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { ContextPack } from '../app/wordlist/context-pack';
-import { ContextPackService } from '../app/wordlist/context-pack.service';
-import { WordList } from '../app/wordlist/word-list';
+import { ContextPack } from '../app/wordlist/contextpack';
+import { ContextPackService } from '../app/wordlist/contextpack.service';
+import { WordList } from '../app/wordlist/wordlist';
 
 @Injectable()
 export class MockCPService extends ContextPackService {
@@ -37,11 +37,13 @@ export class MockCPService extends ContextPackService {
         super(null);
     }
 
-    getPacks(): Observable<ContextPack[]> {
+    getContextPacks(): Observable<ContextPack[]> {
         return of(MockCPService.testCPs);
     }
 
-    getPack(id: string): Observable<ContextPack> {
+    // getPack test borrowed from Team Climate https://github.com/UMM-CSci-3601-S21/it-1-climate
+
+    getContextPack(id: string): Observable<ContextPack> {
         if (id === MockCPService.testCPs[0]._id) {
             return of(MockCPService.testCPs[0]);
         } else if (id === MockCPService.testCPs[1]._id) {

@@ -29,10 +29,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { LayoutModule } from '@angular/cdk/layout';
 
 import { ContextPackListComponent } from './wordlist/contextpacks/contextpack-list.component';
-import { ContextPackService } from './wordlist/context-pack.service';
+import { ContextPackService } from './wordlist/contextpack.service';
 import { ContextPackCardComponent } from './wordlist/contextpacks/contextpack-card.component';
 import { ContextPackInfoComponent } from './wordlist/contextpacks/contextpack-info.component';
 import { WordlistCardComponent } from './wordlist/wordlists/wordlist-card.component';
+import { AddWordlistComponent } from './wordlist/wordlists/add-wordlist.component';
 
 const MATERIAL_MODULES: any[] = [
   MatListModule,
@@ -60,7 +61,8 @@ const MATERIAL_MODULES: any[] = [
     ContextPackListComponent,
     ContextPackCardComponent,
     ContextPackInfoComponent,
-    WordlistCardComponent
+    WordlistCardComponent,
+    AddWordlistComponent
   ],
   imports: [
     BrowserModule,

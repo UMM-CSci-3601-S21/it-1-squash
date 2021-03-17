@@ -3,11 +3,11 @@ import { MatCardModule } from '@angular/material/card';
 import { ActivatedRoute } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
 import { ActivatedRouteStub } from '../../../testing/activated-route-stub';
-import { MockCPService } from 'src/testing/context-pack.service.mock';
-import { ContextPack } from '../context-pack';
+import { MockCPService } from 'src/testing/contextpack.service.mock';
+import { ContextPack } from '../contextpack';
 import { ContextPackCardComponent } from './contextpack-card.component';
 import { ContextPackInfoComponent } from './contextpack-info.component';
-import { ContextPackService } from '../context-pack.service';
+import { ContextPackService } from '../contextpack.service';
 
 describe('ContextPackInfoComponent', () => {
   let contextPackInfoComponent: ContextPackInfoComponent;
@@ -39,7 +39,7 @@ describe('ContextPackInfoComponent', () => {
     expect(ContextPackInfoComponent).toBeTruthy();
   });
 
-
+// Rest of 'it' tests were borrowed from Team Climate https://github.com/UMM-CSci-3601-S21/it-1-climate
 
   it('should return null when it is given an improper ID', () => {
     activatedRoute.setParamMap({ id: 'badID' });
