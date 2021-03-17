@@ -57,6 +57,9 @@ public class WordRiverControllerSpec {
     MongoCollection<Document> ctxDocuments = db.getCollection("wordlists");
     ctxDocuments.drop();
     List<Document> testPacks = new ArrayList<>();
+
+    // this format for adding items was borrowed from Team Climate https://github.com/UMM-CSci-3601-S21/it-1-climate
+
     testPacks.add(new Document().append("name", "batman").append("icon", "batman.png").append("enabled", "true").append(
         "wordlist",
         Arrays.asList(new Document().append("name", "batman").append("enabled", true)

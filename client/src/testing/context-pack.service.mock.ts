@@ -41,6 +41,8 @@ export class MockCPService extends ContextPackService {
         return of(MockCPService.testCPs);
     }
 
+    // getPack test borrowed from Team Climate https://github.com/UMM-CSci-3601-S21/it-1-climate
+
     getPack(id: string): Observable<ContextPack> {
         if (id === MockCPService.testCPs[0]._id) {
             return of(MockCPService.testCPs[0]);

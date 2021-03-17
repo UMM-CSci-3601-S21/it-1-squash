@@ -39,7 +39,7 @@ describe('ContextPackInfoComponent', () => {
     expect(ContextPackInfoComponent).toBeTruthy();
   });
 
-
+// Rest of 'it' tests were borrowed from Team Climate https://github.com/UMM-CSci-3601-S21/it-1-climate
 
   it('should return null when it is given an improper ID', () => {
     activatedRoute.setParamMap({ id: 'badID' });

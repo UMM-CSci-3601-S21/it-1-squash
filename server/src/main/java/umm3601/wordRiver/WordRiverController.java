@@ -53,6 +53,8 @@ public class WordRiverController {
     }
   }
 
+  // addWordList method borrowed from Team Climate https://github.com/UMM-CSci-3601-S21/it-1-climate
+
   public void addWordList(Context ctx) {
     WordList newWordList = ctx.bodyValidator(WordList.class)
       .get();

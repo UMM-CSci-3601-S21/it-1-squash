@@ -25,6 +25,8 @@ export class ContextPackService {
     return this.httpClient.get<ContextPack>(this.contextPackUrl + '/' + id);
   }
 
+  // addWordList method borrowed from Team Climate https://github.com/UMM-CSci-3601-S21/it-1-climate
+
   addWordList(newWordList: WordList): Observable<string> {
     const url: string[] = location.href.split('/');
     const urlNew: string = url[4];
