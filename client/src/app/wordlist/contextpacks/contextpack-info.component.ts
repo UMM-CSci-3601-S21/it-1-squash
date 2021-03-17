@@ -16,15 +16,13 @@ export class ContextPackInfoComponent implements OnInit, OnDestroy {
   wordList: Array<WordList>;
   wordlist: Array<WordList>;
   id: string;
+  _id: string;
   getCpSub: Subscription;
 
   constructor(private route: ActivatedRoute, private contextPackService: ContextPackService) { }
 
   ngOnInit(): void {
-    // We subscribe to the parameter map here so we'll be notified whenever
-    // that changes (i.e., when the URL changes) so this component will update
-    // to display the newly requested user.
-    this.route.paramMap.subscribe((pmap) => {
+       this.route.paramMap.subscribe((pmap) => {
       this.id = pmap.get('id');
       if (this.getCpSub) {
         this.getCpSub.unsubscribe();

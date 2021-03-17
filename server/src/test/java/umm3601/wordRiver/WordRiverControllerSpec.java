@@ -17,6 +17,7 @@ import com.mongodb.client.MongoClient;
 import com.mongodb.client.MongoClients;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
+
 import org.bson.Document;
 import org.bson.types.ObjectId;
 import org.junit.jupiter.api.AfterAll;
@@ -140,4 +141,24 @@ public void GetContextPackWithExistentId() throws IOException {
     });
   }
 
+  @Test
+public void AddNewWordList() throws IOException {
+  String testNewWordList = "{"
+    + "\"name\": \"Test\","
+    + "\"enabled\": true,"
+    + "\"nouns\": [],"
+    + "\"verbs\": [],"
+    + "\"adjectives\": [],"
+    + "\"misc\": []"
+    + "}";
+
+    String testID = robinId.toHexString();
+    mockReq.setBodyContent(testNewWordList);
+    mockReq.setMethod("POST");
+
+    Context ctx = ContextUtil.init(mockReq, mockRes, "api/wordlists/:id", ImmutableMap.of("id", testID));
+    wordRiverController.addWordList(ctx);
+
+    assertEquals(200, mockRes.getStatus());
+}
 }

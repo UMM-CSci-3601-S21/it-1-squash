@@ -4,6 +4,8 @@ import static com.mongodb.client.model.Filters.eq;
 
 import java.util.ArrayList;
 import com.mongodb.client.MongoDatabase;
+import com.mongodb.client.model.Updates;
+
 import org.bson.Document;
 import org.bson.types.ObjectId;
 import org.mongojack.JacksonMongoCollection;
@@ -49,6 +51,13 @@ public class WordRiverController {
     } else {
       ctx.json(contextPack);
     }
+  }
+
+  public void addWordList(Context ctx) {
+    WordList newWordList = ctx.bodyValidator(WordList.class)
+      .get();
+    String id = ctx.pathParam("id");
+    contextPackCollection.updateById(id, Updates.push("wordlist", newWordList));
   }
 
 }

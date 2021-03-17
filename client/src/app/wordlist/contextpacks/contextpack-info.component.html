@@ -13,3 +13,9 @@
       </div>
    </div>
  </div>
+
+
+ <button *ngIf="contextPack"mat-mat-raised-button class="add-wordlist" matTooltip="Add New Word List" matTooltipPosition="left"
+  [routerLink]="['/wordlists',this.contextPack._id, 'new']">
+  <mat-icon aria-label="Add Word List">add</mat-icon>
+</button>
