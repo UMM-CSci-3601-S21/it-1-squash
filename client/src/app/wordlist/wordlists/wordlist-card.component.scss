@@ -1,12 +1,24 @@
-
-.mat-card-title {
-  display: inline-block;
-  font-size: 20px;
-  padding-left: 15px;
+.mat-card{
+  background-color: rgb(211, 202, 202);
 }
 
+.mat-card-header {
+  font-size: 20px;
+  justify-content: left;
+  background-color: rgb(154, 241, 241);
+  text-decoration: underline;
+}
+
+#wordlist-enabled {
+  font-size: 15px;
+}
+
+
+.mat-card-content{
+  justify-content: left;
+}
 #nouns {
-  background-color:lightcoral;
+  background-color:rgb(231, 162, 162);
 }
 
 #adj {
@@ -23,15 +35,17 @@
 
 #pos {
   text-align: justify;
-  padding-top: 10px;
+  padding-top: 5px;
   font-size: 16px;
   font-weight: bold;
   text-decoration: underline;
 }
 
+
 .wordforms > ul {
   font-weight: bolder;
 }
+
 
 #type {
   text-align: justify;
