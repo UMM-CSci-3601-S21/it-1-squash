@@ -9,7 +9,7 @@
     "enabled": true,
     "wordlist": [
       {
-        "name": "Batman Villains",
+        "name": "Joker",
         "enabled": true,
         "nouns": [
           {
@@ -104,45 +104,44 @@
         "enabled": true,
         "nouns": [
           {
-            "word": "Joker",
+            "word": "Batman",
             "forms": [
-              "Joker"
+              ""
             ]
           },
           {
-            "word": "villain",
+            "word": "hero",
             "forms": [
-              "villain, villains"
+              "heroes"
             ]
           }
         ],
         "verbs": [
           {
-            "word": "fly",
+            "word": "glide",
             "forms": [
-              "fly",
-              "flown",
-              "flew"
+              "glided",
+              "glides"
             ]
           },
           {
-            "word": "dance",
+            "word": "punch",
             "forms": [
-              "dance",
-              "danced"
+              "punches",
+              "punched"
             ]
           },
           {
             "word": "steal",
             "forms": [
-              "steal",
+              "stolen",
               "stole"
             ]
           },
           {
             "word": "laugh",
             "forms": [
-              "laugh",
+              "laughs",
               "laughed",
               "laughing"
             ]
@@ -150,7 +149,6 @@
           {
             "word": "hide",
             "forms": [
-              "hide",
               "hid",
               "hiding"
             ]
@@ -158,15 +156,15 @@
         ],
         "adjectives": [
           {
-            "word": "evil",
+            "word": "good",
             "forms": [
-              "evil"
+              ""
             ]
           },
           {
             "word": "sad",
             "forms": [
-              "sad"
+              "sadder"
             ]
           }
         ],
@@ -174,7 +172,7 @@
           {
             "word": "the",
             "forms": [
-              "the"
+              ""
             ]
           }
         ]
@@ -191,19 +189,19 @@
     "enabled": false,
     "wordlist": [
       {
-        "name": "Batman Allies",
+        "name": "Robin",
         "enabled": false,
         "nouns": [
           {
-            "word": "Joker",
+            "word": "Robin",
             "forms": [
-              "Joker"
+              ""
             ]
           },
           {
-            "word": "villain",
+            "word": "sidekick",
             "forms": [
-              "villain, villains"
+              "sidekicks"
             ]
           }
         ],
@@ -249,89 +247,9 @@
         ],
         "adjectives": [
           {
-            "word": "evil",
+            "word": "good",
             "forms": [
-              "evil"
-            ]
-          },
-          {
-            "word": "sad",
-            "forms": [
-              "sad"
-            ]
-          }
-        ],
-        "misc": [
-          {
-            "word": "the",
-            "forms": [
-              "the"
-            ]
-          }
-        ]
-      },
-      {
-        "name": "Batman Allies",
-        "enabled": false,
-        "nouns": [
-          {
-            "word": "Joker",
-            "forms": [
-              "Joker"
-            ]
-          },
-          {
-            "word": "villain",
-            "forms": [
-              "villain, villains"
-            ]
-          }
-        ],
-        "verbs": [
-          {
-            "word": "fly",
-            "forms": [
-              "fly",
-              "flown",
-              "flew"
-            ]
-          },
-          {
-            "word": "dance",
-            "forms": [
-              "dance",
-              "danced"
-            ]
-          },
-          {
-            "word": "steal",
-            "forms": [
-              "steal",
-              "stole"
-            ]
-          },
-          {
-            "word": "laugh",
-            "forms": [
-              "laugh",
-              "laughed",
-              "laughing"
-            ]
-          },
-          {
-            "word": "hide",
-            "forms": [
-              "hide",
-              "hid",
-              "hiding"
-            ]
-          }
-        ],
-        "adjectives": [
-          {
-            "word": "evil",
-            "forms": [
-              "evil"
+              ""
             ]
           },
           {
