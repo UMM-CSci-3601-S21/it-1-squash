@@ -4,46 +4,37 @@
     <mat-card-header class="wordlist-card-name">
      {{this.wordList.name}}
     </mat-card-header>
-    <mat-card-content class="wordlist-enabled">
-      <p>Word List Enabled: <span class="wordlist-card-enabled">{{ this.wordList.enabled }}</span></p>
+    <mat-card-subtitle>
+    <mat-card-content class="wordlist-enabled" *ngIf="wordList.enabled; else elseBlock">
+      Word List Enabled: <mat-icon>check_box</mat-icon>
     </mat-card-content>
+    <ng-template #elseBlock>Word List Disabled: <mat-icon>check_box_outline_blank</mat-icon></ng-template>
+    </mat-card-subtitle>
 
     <!-- Format for displaying items in word list based on Team Climate's formatting: https://github.com/UMM-CSci-3601-S21/it-1-climate -->
 
     <mat-card id="nouns">
     <mat-card-content id="pos">Nouns</mat-card-content>
     <mat-card-content class="wordforms" *ngFor="let nounWord of wordList.nouns">
-      <ul id="type">Word:</ul>
-      <li>{{nounWord.word}} </li>
-      <ul>Form(s):</ul>
-      <li>{{nounWord.forms}}</li>
+      <ul class="word"><p class="category-word"> {{nounWord.word}} </p></ul>
     </mat-card-content>
     </mat-card>
     <mat-card id="adj">
     <mat-card-content id="pos">Adjectives</mat-card-content>
     <mat-card-content class="wordforms" *ngFor="let adjectiveWord of wordList.adjectives">
-      <ul id="type">Word:</ul>
-      <li>{{adjectiveWord.word}}</li>
-      <ul>Form(s):</ul>
-      <li>{{adjectiveWord.forms}}</li>
+      <ul class="word"><p class="category-word"> {{adjectiveWord.word}} </p></ul>
     </mat-card-content>
     </mat-card>
     <mat-card id="verbs">
     <mat-card-content id="pos">Verbs</mat-card-content>
     <mat-card-content class="wordforms" *ngFor="let verbWord of wordList.verbs">
-      <ul id="type">Word: </ul>
-      <li>{{verbWord.word}}</li>
-      <ul>Form(s):</ul>
-      <li>{{verbWord.forms}}</li>
+      <ul class="word"><p class="category-word">{{verbWord.word}} <p></ul>
     </mat-card-content>
     </mat-card>
     <mat-card id="misc">
     <mat-card-content id="pos">Misc</mat-card-content>
     <mat-card-content class="wordforms" *ngFor="let miscellaneousWord of wordList.misc">
-      <ul id="type">Word:</ul>
-      <li> {{miscellaneousWord.word}}</li>
-      <ul>Form(s):</ul>
-      <li> {{miscellaneousWord.forms}}</li>
+      <ul class="word"><p class="category-word"> {{miscellaneousWord.word}}</p></ul>
     </mat-card-content>
     </mat-card>
     </div>

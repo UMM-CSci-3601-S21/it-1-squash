@@ -55,10 +55,7 @@ export class AddWordlistComponent implements OnInit {
       });
     }, err => {
       console.log(err);
-      this.snackBar.open('Failed to add the word list', 'OK', {
-        duration: 5000,
       });
-    });
   }
 
 }

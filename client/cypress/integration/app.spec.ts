@@ -9,7 +9,7 @@ describe('App', () => {
     page.getAppTitle().should('contain', 'Word River');
   });
 
-  it('The sidenav should open, navigate to "Wordlists" and back to "Home"', () => {
+  it('The sidenav should open, navigate to "Context Packs" and back to "Home"', () => {
     // Before clicking on the button, the sidenav should be hidden
     page.getSidenav()
       .should('be.hidden');
@@ -17,7 +17,7 @@ describe('App', () => {
     page.getSidenavButton().click()
       .should('be.visible');
 
-    page.getNavLink('Wordlists').click();
+    page.getNavLink('Context Packs').click();
     cy.url().should('match', /\/wordlists$/);
     page.getSidenav()
       .should('be.hidden');
