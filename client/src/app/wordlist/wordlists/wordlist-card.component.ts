@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { WordList } from '../word-list';
+import { WordList } from '../wordlist';
 
 @Component({
   selector: 'app-wordlists-card',

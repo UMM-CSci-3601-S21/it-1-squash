@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { ContextPack } from '../context-pack';
+import { ContextPack } from '../contextpack';
 
 @Component({
   selector: 'app-contextpack-card',

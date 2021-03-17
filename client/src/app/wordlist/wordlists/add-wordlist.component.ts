@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-import { WordList } from '../word-list';
-import { ContextPackService } from '../context-pack.service';
+import { WordList } from '../wordlist';
+import { ContextPackService } from '../contextpack.service';
 
 @Component({
   selector: 'app-add-wl',

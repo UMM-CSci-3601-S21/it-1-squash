@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ContextPackCardComponent } from './contextpack-card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
-import { WordList } from '../word-list';
+import { WordList } from '../wordlist';
 
 describe('ContextPackCardComponent', () => {
   let cpCard: ContextPackCardComponent;

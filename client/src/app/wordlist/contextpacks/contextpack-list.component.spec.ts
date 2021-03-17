@@ -18,9 +18,9 @@ import { MatIconModule } from '@angular/material/icon';
 
 import { ContextPackListComponent } from './contextpack-list.component';
 import { ContextPackCardComponent } from './contextpack-card.component';
-import { MockCPService } from 'src/testing/context-pack.service.mock';
-import { ContextPackService } from '../context-pack.service';
-import { ContextPack } from '../context-pack';
+import { MockCPService } from 'src/testing/contextpack.service.mock';
+import { ContextPackService } from '../contextpack.service';
+import { ContextPack } from '../contextpack';
 
 const COMMON_IMPORTS: any[] = [
   FormsModule,

@@ -32,11 +32,11 @@ public class WordRiverController {
    *
    * @param ctx a Javalin HTTP context
    */
-  public void getPacks(Context ctx) {
+  public void getContextPacks(Context ctx) {
     ctx.json(contextPackCollection.find(new Document()).into(new ArrayList<>()));
   }
 
-  public void getPack(Context ctx) {
+  public void getContextPack(Context ctx) {
 
     String id = ctx.pathParam("id");
     ContextPack contextPack;

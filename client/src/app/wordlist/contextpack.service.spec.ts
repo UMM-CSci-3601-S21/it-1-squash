@@ -1,9 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
-import { ContextPack } from './context-pack';
-import { ContextPackService } from './context-pack.service';
-import { WordList } from './word-list';
+import { ContextPack } from './contextpack';
+import { ContextPackService } from './contextpack.service';
+import { WordList } from './wordlist';
 import { Word } from './word';
 
 describe('ContextPackService', () => {
@@ -51,17 +51,17 @@ describe('ContextPackService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('getPacks() should call api/wordlists', () => {
-    service.getPacks().subscribe(
+  it('getContextPacks() should call api/wordlists', () => {
+    service.getContextPacks().subscribe(
       packs => expect(packs).toBe(testCPs)
     );
   });
 
-  it('getPackById() calls api/wordlists/id', () => {
+  it('getContextPack() calls api/wordlists/id', () => {
     const targetPack: ContextPack= testCPs[1];
     const targetId: string = targetPack._id;
 
-    service.getPack(targetId).subscribe(
+    service.getContextPack(targetId).subscribe(
       pack => expect(pack).toBe(targetPack)
     );
   });

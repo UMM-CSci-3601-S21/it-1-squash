@@ -51,10 +51,10 @@ public class Server {
     server.start(4567);
 
     // Gets the context packs that are currently in the database.
-    server.get("/api/wordlists", wordRiverController::getPacks);
+    server.get("/api/wordlists", wordRiverController::getContextPacks);
 
     // Gets a single context pack from the database
-    server.get("/api/wordlists/:id", wordRiverController::getPack);
+    server.get("/api/wordlists/:id", wordRiverController::getContextPack);
 
     server.post("/api/wordlists/:id", wordRiverController::addWordList);
 

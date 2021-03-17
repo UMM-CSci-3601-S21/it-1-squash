@@ -100,7 +100,7 @@ public class WordRiverControllerSpec {
   public void GetAllContextPacks() throws IOException {
     // Create fake Javalin context
     Context ctx = ContextUtil.init(mockReq, mockRes, "api/wordlists");
-    wordRiverController.getPacks(ctx);
+    wordRiverController.getContextPacks(ctx);
     assertEquals(200, mockRes.getStatus());
     String result = ctx.resultString();
     assertEquals(db.getCollection("wordlists").countDocuments(),
@@ -113,7 +113,7 @@ public void GetContextPackWithExistentId() throws IOException {
   String testID = robinId.toHexString();
 
   Context ctx = ContextUtil.init(mockReq, mockRes, "api/wordlists/:id", ImmutableMap.of("id", testID));
-  wordRiverController.getPack(ctx);
+  wordRiverController.getContextPack(ctx);
 
   assertEquals(200, mockRes.getStatus());
 
@@ -130,7 +130,7 @@ public void GetContextPackWithExistentId() throws IOException {
     Context ctx = ContextUtil.init(mockReq, mockRes, "api/wordlists/:id", ImmutableMap.of("id", "bad"));
 
     assertThrows(BadRequestResponse.class, () -> {
-      wordRiverController.getPack(ctx);
+      wordRiverController.getContextPack(ctx);
     });
   }
 
@@ -140,7 +140,7 @@ public void GetContextPackWithExistentId() throws IOException {
     Context ctx = ContextUtil.init(mockReq, mockRes, "api/wordlists/:id", ImmutableMap.of("id", "58af3a600343927e48e87335"));
 
     assertThrows(NotFoundResponse.class, () -> {
-      wordRiverController.getPack(ctx);
+      wordRiverController.getContextPack(ctx);
     });
   }
 

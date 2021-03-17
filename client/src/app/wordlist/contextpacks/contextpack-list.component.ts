@@ -1,7 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ContextPack } from '../context-pack';
-import { WordList } from '../word-list';
-import { ContextPackService } from '../context-pack.service';
+import { ContextPack } from '../contextpack';
+import { WordList } from '../wordlist';
+import { ContextPackService } from '../contextpack.service';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -23,7 +23,7 @@ export class ContextPackListComponent implements OnInit, OnDestroy {
 
   getPacksFromServer(): void {
     this.unsub();
-    this.getPackSub = this.packService.getPacks().subscribe(
+    this.getPackSub = this.packService.getContextPacks().subscribe(
       returnedPacks => {
         this.contextPacks = returnedPacks;
     }, err => {
