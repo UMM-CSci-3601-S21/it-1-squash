@@ -8,6 +8,8 @@
       <p>Word List Enabled: <span class="wordlist-card-enabled">{{ this.wordList.enabled }}</span></p>
     </mat-card-content>
 
+    <!-- Format for displaying items in word list based on Team Climate's formatting: https://github.com/UMM-CSci-3601-S21/it-1-climate -->
+
     <mat-card id="nouns">
     <mat-card-content id="pos">Nouns</mat-card-content>
     <mat-card-content class="wordforms" *ngFor="let nounWord of wordList.nouns">
