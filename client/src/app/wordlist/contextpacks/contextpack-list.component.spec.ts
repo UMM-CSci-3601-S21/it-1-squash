@@ -81,13 +81,13 @@ describe('Misbehaving Context Pack List', () => {
   let cpList: ContextPackListComponent;
   let fixture: ComponentFixture<ContextPackListComponent>;
   let cpServiceStub: {
-     getPacks: () =>  Observable<ContextPack[]>;
+     getContextPacks: () =>  Observable<ContextPack[]>;
   };
 
   beforeEach(() =>  {
     // Stub Context-Pack service for test purposes
     cpServiceStub = {
-      getPacks: () => new Observable(observer => {
+      getContextPacks: () => new Observable(observer => {
          observer.error('Error-prone observable');
       })
     };
